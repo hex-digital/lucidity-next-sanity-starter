@@ -19,6 +19,7 @@
     <a aria-label="Codefactor grade" href=https://www.codefactor.io/repository/github/hex-digital/lucidity-next-sanity-starter">
       <img alt="Codefactor" src="https://img.shields.io/codefactor/grade/github/hex-digital/lucidity-next-sanity-starter?label=Codefactor&logo=codefactor&style=flat-quare&labelColor=000000" />
     </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhex-digital%2Flucidity-next-sanity-starter?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhex-digital%2Flucidity-next-sanity-starter.svg?type=shield"/></a>
     <a aria-label="CodeClimate maintainability" href="https://codeclimate.com/github/hex-digital/lucidity-next-sanity-starter">
       <img alt="Maintainability" src="https://img.shields.io/codeclimate/maintainability/hex-digital/lucidity-next-sanity-starter?label=Maintainability&logo=code-climate&style=flat-quare&labelColor=000000" />
     </a>
@@ -40,6 +41,9 @@
     <a href="https://github.com/hex-digital/lucidity-next-sanity-starter/issues/new?labels=enhancement">Request Feature</a>
   </p>
 </div>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhex-digital%2Flucidity-next-sanity-starter.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhex-digital%2Flucidity-next-sanity-starter?ref=badge_large)
 
 ## Sites powered by Lucidity
 
