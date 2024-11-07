@@ -25,6 +25,8 @@
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "devDependencies": {
+    "@sanity/presentation": "^1.17.9",
+    "@sanity/util": "^3.63.0",
     "@testing-library/jest-dom": "^6.6.2",
     "@testing-library/react": "^16.0.1",
     "@vitejs/plugin-react": "^4.3.3",
@@ -37,8 +39,12 @@
   "peerDependencies": {
     "@sanity/icons": "^3.4.0",
     "@sanity/image-url": "^1.0.2",
+    "@sanity/presentation": "^1.17.9",
     "@sanity/types": "^3.61.0",
     "@sanity/ui": "^2.8.9",
+    "@sanity/util": "^3.63.0",
+    "@tinloof/sanity-studio": "^1.4.0",
+    "@tinloof/sanity-web": "^0.6.0",
     "@types/react": "^18",
     "groq": "^3.62.2",
     "react": "^18",
@@ -50,10 +56,17 @@
   "dependencies": {
     "@portabletext/toolkit": "^2.0.15",
     "nanoid": "^5.0.7",
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.2",
+    "use-debounce": "^10.0.4"
   },
   "peerDependenciesMeta": {
     "sanity-plugin-note-field": {
+      "optional": true
+    },
+    "@tinloof/sanity-studio": {
+      "optional": true
+    },
+    "@tinloof/sanity-web": {
       "optional": true
     }
   }
