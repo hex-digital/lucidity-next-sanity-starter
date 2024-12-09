@@ -25,7 +25,7 @@
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "dependencies": {
-    "nanoid": "^5.0.8",
+    "nanoid": "^5.0.9",
     "prettier": "^3.3.3",
     "speakingurl": "^14.0.1"
   },
