@@ -1,18 +1,8 @@
 import { type SchemaTypeDefinition } from 'sanity';
-
-interface SanityBlockSchema {
-  schema: SchemaTypeDefinition;
-}
-
-const outerBlocksSchema = import.meta.glob<SanityBlockSchema>(
-  '../blocks/outer/**/schema.{ts,tsx}',
-  { eager: true },
-);
-
-const innerBlocksSchema = import.meta.glob<SanityBlockSchema>(
-  '../blocks/inner/**/schema.{ts,tsx}',
-  { eager: true },
-);
+import {
+  innerBlocksSchema,
+  outerBlocksSchema,
+} from '@/features/modular-content-blocks/lib/blockSchemaGenerated';
 
 export const outerOnlyBlocks = Object.values(outerBlocksSchema)
   .map((block) => block.schema)

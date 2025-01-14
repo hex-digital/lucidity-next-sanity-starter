@@ -23,6 +23,9 @@
     "deploy-graphql": "sanity graphql deploy",
     "lint": "pnpm eslint . && pnpm prettier",
     "lint:fix": "pnpm eslint . --fix && pnpm prettier:fix",
+    "postinstall": "node features/modular-content-blocks/scripts/generate-sanity-block-schema-imports.cjs",
+    "prebuild": "node features/modular-content-blocks/scripts/generate-sanity-block-schema-imports.cjs",
+    "predev": "node features/modular-content-blocks/scripts/generate-sanity-block-schema-imports.cjs",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
