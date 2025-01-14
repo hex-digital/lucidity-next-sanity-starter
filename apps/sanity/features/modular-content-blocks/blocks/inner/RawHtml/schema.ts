@@ -1,4 +1,4 @@
-import { defineField, type SchemaTypeDefinition } from 'sanity';
+import { defineField } from 'sanity';
 import { FaCode } from 'react-icons/fa';
 import { withFieldset } from '@pkg/sanity-toolkit/studio/schema/utilities';
 import { OBJECT } from '@pkg/common/constants/schemaTypes';
