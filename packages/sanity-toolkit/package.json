@@ -33,7 +33,7 @@
     "happy-dom": "^16.5.3",
     "prettier": ">=3.4.2 <5.0.0",
     "typescript-plugin-css-modules": "^5.1.0",
-    "vitest": "^2.1.8"
+    "vitest": "^2.1.9"
   },
   "peerDependencies": {
     "@portabletext/toolkit": "^2.0.16",
