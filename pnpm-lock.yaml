@@ -190,6 +190,9 @@ importers:
       '@types/react-dom':
         specifier: 19.0.3
         version: 19.0.3(@types/react@19.0.7)
+      '@types/rss':
+        specifier: ^0.0.32
+        version: 0.0.32
       '@vitest/coverage-v8':
         specifier: 2.1.8
         version: 2.1.8(vitest@2.1.8(@types/node@22.10.6)(@vitest/ui@2.1.8)(happy-dom@16.5.3)(jsdom@26.0.0)(less@4.2.1)(sass@1.83.4)(stylus@0.62.0)(terser@5.37.0))
@@ -2824,6 +2827,9 @@ packages:
 
   '@types/resolve@1.20.2':
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+
+  '@types/rss@0.0.32':
+    resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
 
   '@types/shallow-equals@1.0.3':
     resolution: {integrity: sha512-xZx/hZsf1p9J5lGN/nGTsuW/chJCdlyGxilwg1TS78rygBCU5bpY50zZiFcIimlnl0p41kAyaASsy0bqU7WyBA==}
@@ -10570,6 +10576,8 @@ snapshots:
 
   '@types/resolve@1.20.2': {}
 
+  '@types/rss@0.0.32': {}
+
   '@types/shallow-equals@1.0.3': {}
 
   '@types/speakingurl@13.0.6': {}
@@ -10791,7 +10799,7 @@ snapshots:
       sirv: 3.0.0
       tinyglobby: 0.2.10
       tinyrainbow: 1.2.0
-      vitest: 2.1.8(@types/node@22.10.6)(@vitest/ui@2.1.8)(happy-dom@16.5.3)(jsdom@23.2.0)(less@4.2.1)(sass@1.83.4)(stylus@0.62.0)(terser@5.37.0)
+      vitest: 2.1.8(@types/node@22.10.6)(@vitest/ui@2.1.8)(happy-dom@16.5.3)(jsdom@26.0.0)(less@4.2.1)(sass@1.83.4)(stylus@0.62.0)(terser@5.37.0)
 
   '@vitest/utils@2.1.8':
     dependencies:
