@@ -6,7 +6,7 @@ import {
 } from 'sanity/structure';
 import { LuPencilLine } from 'react-icons/lu';
 import { seoPreviewPane } from '@/structure/seo-pane';
-import { SEO_PREVIEW_DOCUMENT_TYPES } from '@/config/schema';
+import { SEO_PREVIEW_DOCUMENT_TYPES } from '@pkg/common/config/schemaTypes';
 
 export function defaultViews(
   S: StructureBuilder,

@@ -1,4 +1,4 @@
-import { DOCUMENT, SINGLETON } from '@pkg/common/constants/schemaTypes';
+import { DOCUMENT, SINGLETON } from '../constants/schemaTypes';
 
 /**
  * Document Types that should be shown in Internal Link fields, e.g. in Header Nav Menu.
