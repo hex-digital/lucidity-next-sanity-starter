@@ -24,7 +24,7 @@ export function ItemAssetWrapper({
   assetUrl,
   icon,
 }: Readonly<{ assetUrl?: string; icon?: ElementType }>) {
-  let FinalIcon = icon ?? CiBoxList;
+  const FinalIcon = icon ?? CiBoxList;
 
   return (
     <StyledItemAssetWrapper>

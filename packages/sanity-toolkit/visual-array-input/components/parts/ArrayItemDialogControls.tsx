@@ -39,20 +39,20 @@ export function ArrayItemDialogControls({
           />
         </Card>
         {/* @todo turn list view back on once styled */}
-        {false && (
-          <Tooltip
-            content={<Text size={2}>{gridView ? 'List View' : 'Grid View'}</Text>}
-            placement="top"
-          >
-            <ViewButton
-              onClick={() => {
-                setGridView(!gridView);
-              }}
-            >
-              {gridView ? <CiBoxList /> : <IoGridOutline />}
-            </ViewButton>
-          </Tooltip>
-        )}
+        {/*{(*/}
+        {/*  <Tooltip*/}
+        {/*    content={<Text size={2}>{gridView ? 'List View' : 'Grid View'}</Text>}*/}
+        {/*    placement="top"*/}
+        {/*  >*/}
+        {/*    <ViewButton*/}
+        {/*      onClick={() => {*/}
+        {/*        setGridView(!gridView);*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      {gridView ? <CiBoxList /> : <IoGridOutline />}*/}
+        {/*    </ViewButton>*/}
+        {/*  </Tooltip>*/}
+        {/*)}*/}
       </Flex>
     </Stack>
   );
