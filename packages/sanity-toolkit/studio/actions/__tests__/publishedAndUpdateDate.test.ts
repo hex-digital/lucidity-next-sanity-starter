@@ -1,32 +1,39 @@
 import { describe, it, expect, vi } from 'vitest';
 import { setDateFieldToCurrent } from '../setDateFieldToCurrent';
-import { useDocumentOperation } from 'sanity';
+import { useDocumentOperation, type DocumentActionProps, type SanityDocument } from 'sanity';
 
 vi.mock('sanity', () => ({
   useDocumentOperation: vi.fn(),
 }));
 
-const mockProps = {
+const mockDraft: SanityDocument = {
+  _id: 'drafts.67910e85-2584-47db-b416-4483e1c98dd5',
+  _type: 'page',
+  _rev: '9c84cc98-b57e-4875-a365-b978709e3cc4',
+  _createdAt: '2024-10-18T12:28:47Z',
+  _updatedAt: '2024-10-18T12:28:47Z',
+};
+
+const mockPublished: SanityDocument = {
+  _id: '67910e85-2584-47db-b416-4483e1c98dd5',
+  _type: 'page',
+  _rev: '1c11cc11-b11e-1111-a365-b978709e3cc4',
+  _createdAt: '2024-10-18T12:28:48Z',
+  _updatedAt: '2024-10-18T12:28:48Z',
+};
+
+const mockProps: DocumentActionProps = {
   id: 'test-id',
   type: 'test-type',
-  draft: {
-    _id: 'drafts.67910e85-2584-47db-b416-4483e1c98dd5',
-    _type: 'page',
-    _rev: '9c84cc98-b57e-4875-a365-b978709e3cc4',
-    _createdAt: '2024-10-18T12:28:47Z',
-    _updatedAt: '2024-10-18T12:28:47Z',
-  },
-  published: {
-    _id: '67910e85-2584-47db-b416-4483e1c98dd5',
-    _type: 'page',
-    _rev: '1c11cc11-b11e-1111-a365-b978709e3cc4',
-    _createdAt: '2024-10-18T12:28:48Z',
-    _updatedAt: '2024-10-18T12:28:48Z',
-  },
+  draft: mockDraft,
+  published: mockPublished,
   transactionSyncLock: null,
   liveEdit: false,
   ready: true,
   onComplete: () => {},
+  version: mockDraft,
+  liveEditSchemaType: false,
+  release: undefined,
 };
 
 describe('publishAndUpdateDate', () => {
@@ -53,16 +60,20 @@ describe('publishAndUpdateDate', () => {
   });
 
   it('should not override the field if it is already set', () => {
-    const props = {
+    const draftWithDate: SanityDocument & { publishedAt: string } = {
+      ...mockDraft,
+      publishedAt: '2024-10-18T12:28:47Z',
+    };
+
+    const publishedWithDate: SanityDocument & { publishedAt: string } = {
+      ...mockPublished,
+      publishedAt: '2024-10-18T12:28:47Z',
+    };
+
+    const props: DocumentActionProps = {
       ...mockProps,
-      draft: {
-        ...mockProps.draft,
-        publishedAt: '2024-10-18T12:28:47Z',
-      },
-      published: {
-        ...mockProps.published,
-        publishedAt: '2024-10-18T12:28:47Z',
-      },
+      draft: draftWithDate,
+      published: publishedWithDate,
     };
 
     const mockPatch = { execute: vi.fn() };
