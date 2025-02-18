@@ -18,7 +18,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate:types": "npx sanity typegen generate",
+    "generate:types": "pnpm sanity typegen generate",
     "lint": "next lint && pnpm prettier",
     "lint:fix": "next lint --fix && pnpm prettier:fix",
     "prettier": "prettier --check .",
