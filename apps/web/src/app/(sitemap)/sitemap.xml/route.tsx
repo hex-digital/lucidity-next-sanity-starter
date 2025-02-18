@@ -1,6 +1,9 @@
 import { generateSitemap } from '@pkg/sanity-toolkit/sitemap-feeds/lib/generateSitemap';
-import { DOCUMENTS_IN_SITEMAP, SITEMAP_XSL_URL } from '@/features/sitemap/sitemap-config';
-import { sanityDocumentsToSitemapEntries } from '@/features/sitemap/utilities/sanityDocumentsToSitemapEntries';
+import {
+  DOCUMENTS_IN_SITEMAP,
+  SITEMAP_XSL_URL,
+} from '@/features/sitemap-feeds/sitemap-config';
+import { sanityDocumentsToSitemapEntries } from '@/features/sitemap-feeds/utilities/sanityDocumentsToSitemapEntries';
 
 export const revalidate = 86400; // 24 hours
 
