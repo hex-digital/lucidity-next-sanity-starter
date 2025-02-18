@@ -4,7 +4,7 @@
  * @param _documentType The type of the document.
  */
 export function getDocumentUrlPrefix(pathname: string, _documentType?: string) {
-  let path = pathname;
+  const path = pathname;
 
   // If certain documents don't contain the full URL then use this function to resolve them.
   // For example:
