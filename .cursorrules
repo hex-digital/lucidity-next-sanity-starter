@@ -1,65 +1,76 @@
-  You are an expert in TypeScript, React, NextJS, HTML, CSS, and website development.
+You are an expert in TypeScript, React, NextJS, HTML, CSS, and website development.
 
-  Code Style and Structure
-  - Write concise, technical TypeScript code with accurate examples.
-  - Use functional and declarative programming patterns; avoid classes.
-  - Prefer iteration and modularisation over code duplication.
-  - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
-  - Structure files: exported component, subcomponents, helpers, static content, types.
-  - Follow NextJS's official documentation for setting up and configuring your projects: https://nextjs.org/docs
-  - Always use Nextjs App Router, and never the Pages Router.
+Code Style and Structure
 
-  Naming Conventions
-  - Use lowercase with dashes for directories (e.g., components/auth-wizard).
-  - Use camcelCase for files (e.g., components/auth-wizard/authWizard.tsx).
-  - Favor named exports for components.
+- Write concise, technical TypeScript code with accurate examples.
+- Use functional and declarative programming patterns; avoid classes.
+- Prefer iteration and modularisation over code duplication.
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
+- Structure files: exported component, subcomponents, helpers, static content, types.
+- Follow NextJS's official documentation for setting up and configuring your projects: https://nextjs.org/docs
+- Always use Nextjs App Router, and never the Pages Router.
 
-  TypeScript Usage
-  - Use TypeScript for all code; prefer interfaces over types.
-  - Use functional components with TypeScript interfaces.
-  - Use strict mode in TypeScript for better type safety.
+Naming Conventions
 
-  Syntax and Formatting
-  - Use the "function" keyword for pure functions.
-  - Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
-  - Use declarative JSX.
-  - Use Prettier for consistent code formatting.
-  - Prefer using nullish coalescing operator ( ?? ) instead of a logical or ( || ), as it is a safer operator.
+- Use lowercase with dashes for directories (e.g., components/auth-wizard).
+- Use camcelCase for files (e.g., components/auth-wizard/authWizard.tsx).
+- Favor named exports for components.
 
-  UI and Styling
-  - Use React Aria for base UI components.
-  - Implement responsive design with Flexbox for screen size adjustments.
-  - Use CSS Modules or Tailwind CSS for component styling.
-  - Ensure high accessibility (a11y) standards using ARIA roles and native accessibility props.
-  - Leverage framer motion for performant animations and transitions.
+TypeScript Usage
 
-  Performance Optimization
-  - Minimise the use of useState and useEffect; prefer context and reducers for state management.
-  - Implement code splitting and lazy loading for non-critical components with React's Suspense and dynamic imports.
-  - Profile and monitor performance using JavaScript and React's built-in tools and debugging features.
-  - Avoid unnecessary re-renders by memoising components and using useMemo and useCallback hooks appropriately.
+- Use TypeScript for all code; prefer interfaces over types.
+- Use functional components with TypeScript interfaces.
+- Use strict mode in TypeScript for better type safety.
 
-  Navigation
-  - Use Nextjs for routing and navigation; follow its best practices.
+Syntax and Formatting
 
-  State Management
-  - Use React Context.
-  - For complex state management, consider using Zustand.
+- Use the "function" keyword for pure functions.
+- Avoid unnecessary curly braces in conditionals; use concise syntax for simple statements.
+- Use declarative JSX.
+- Use Prettier for consistent code formatting.
+- Prefer using nullish coalescing operator ( ?? ) instead of a logical or ( || ), as it is a safer operator.
 
-  Error Handling and Validation
-  - Use Zod for runtime validation and error handling.
-  - Implement proper error logging using Sentry or a similar service.
-  - Prioritise error handling and edge cases:
-    - Handle errors at the beginning of functions.
-    - Use early returns for error conditions to avoid deeply nested if statements.
-    - Avoid unnecessary else statements; use if-return pattern instead.
-    - Implement global error boundaries to catch and handle unexpected errors.
+UI and Styling
 
-  Testing
-  - Write unit and integration tests using Vitest and React Testing Library.
-  - Consider snapshot testing for components to ensure UI consistency.
+- Use React Aria for base UI components.
+- Implement responsive design with Flexbox for screen size adjustments.
+- Use CSS Modules or Tailwind CSS for component styling.
+- Ensure high accessibility (a11y) standards using ARIA roles and native accessibility props.
+- Leverage framer motion for performant animations and transitions.
 
-  Key Conventions
-  1. Rely on Expo's managed workflow for streamlined development and deployment.
-  2. Prioritise Core Web Vitals (Load Time, Jank, and Responsiveness).
-  3. Follow React and NextJS's best practices for website development.
+Performance Optimization
+
+- Minimise the use of useState and useEffect; prefer context and reducers for state management.
+- Implement code splitting and lazy loading for non-critical components with React's Suspense and dynamic imports.
+- Profile and monitor performance using JavaScript and React's built-in tools and debugging features.
+- Avoid unnecessary re-renders by memoising components and using useMemo and useCallback hooks appropriately.
+
+Navigation
+
+- Use Nextjs for routing and navigation; follow its best practices.
+
+State Management
+
+- Use React Context.
+- For complex state management, consider using Zustand.
+
+Error Handling and Validation
+
+- Use Zod for runtime validation and error handling.
+- Implement proper error logging using Sentry or a similar service.
+- Prioritise error handling and edge cases:
+  - Handle errors at the beginning of functions.
+  - Use early returns for error conditions to avoid deeply nested if statements.
+  - Avoid unnecessary else statements; use if-return pattern instead.
+  - Implement global error boundaries to catch and handle unexpected errors.
+
+Testing
+
+- Write unit and integration tests using Vitest and React Testing Library.
+- Consider snapshot testing for components to ensure UI consistency.
+
+Key Conventions
+
+1. Prioritise Core Web Vitals (Load Time, Jank, and Responsiveness).
+2. Follow React and NextJS's best practices for website development.
+3. Use pnpm for package management.
