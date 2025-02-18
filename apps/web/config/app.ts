@@ -27,8 +27,6 @@ export const appConfig = {
   siteDomain: process.env.NEXT_PUBLIC_SITE_DOMAIN ?? process.env.VERCEL_URL ?? '',
   baseUrl: envBaseUrl ?? siteDomainAsBaseUrl ?? vercelUrlAsBaseUrl ?? '',
 
-  apiBaseUrl: assertValue(process.env.NEXT_PUBLIC_API_BASE_URL, 'NEXT_PUBLIC_API_BASE_URL'),
-
   // Not exposed to the front-end, used solely by the server
   dataSyncAuthToken: checkServerOnlyValue(
     process.env.SANITY_API_SYNC_AUTH_TOKEN,

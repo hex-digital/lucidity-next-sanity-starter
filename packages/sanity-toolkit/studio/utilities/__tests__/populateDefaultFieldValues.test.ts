@@ -51,7 +51,7 @@ describe('populateDefaultFieldValues', () => {
       },
     };
 
-    // @ts-expect-error
+    // @ts-expect-error We don't care for the actual type Sanity wants here, we just mock it
     const result = populateDefaultFieldValues('nonExistentSchema', mockFieldProps);
 
     expect(result).toEqual({});

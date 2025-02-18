@@ -13,18 +13,18 @@ describe('Action Resolver', () => {
     documentId: 'test-123',
   } as unknown as DocumentActionsContext;
 
-  const mockPublishAction: DocumentActionComponent = (_props) => null;
+  const mockPublishAction: DocumentActionComponent = () => null;
   mockPublishAction.action = 'publish';
 
-  const mockPublishActionModifier: DocumentActionComponent = (_props) => ({ label: 'Update' });
-  const mockSecondPublishActionModifier: DocumentActionComponent = (_props) => ({
+  const mockPublishActionModifier: DocumentActionComponent = () => ({ label: 'Update' });
+  const mockSecondPublishActionModifier: DocumentActionComponent = () => ({
     label: 'Second Update',
   });
 
-  const mockNewAction: DocumentActionComponent = (_props) => ({ label: 'New Action' });
+  const mockNewAction: DocumentActionComponent = () => ({ label: 'New Action' });
 
   function createModifierAndTest(modifierConfig: any) {
-    const handler = vi.fn((action) => mockPublishActionModifier);
+    const handler = vi.fn(() => mockPublishActionModifier);
     const modifier = modifyAction({
       actions: 'publish',
       handler,
@@ -86,8 +86,8 @@ describe('Action Resolver', () => {
     });
 
     it('should handle multiple action modifiers in sequence', () => {
-      const handler = vi.fn((action) => mockPublishActionModifier);
-      const handler2 = vi.fn((action) => mockSecondPublishActionModifier);
+      const handler = vi.fn(() => mockPublishActionModifier);
+      const handler2 = vi.fn(() => mockSecondPublishActionModifier);
 
       const modifier = modifyAction({ actions: 'publish', handler });
       const modifier2 = modifyAction({ actions: 'publish', handler: handler2 });

@@ -18,7 +18,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate:types": "npx sanity typegen generate",
+    "generate:types": "pnpm sanity typegen generate",
     "lint": "next lint && pnpm prettier",
     "lint:fix": "next lint --fix && pnpm prettier:fix",
     "prettier": "prettier --check .",
@@ -51,6 +51,7 @@
     "eslint-config-next": "15.1.7",
     "postcss": "8.5.2",
     "prettier": ">=3.4.2 <5.0.0",
+    "sanity": "3.76.1",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
     "vitest": "3.0.6"

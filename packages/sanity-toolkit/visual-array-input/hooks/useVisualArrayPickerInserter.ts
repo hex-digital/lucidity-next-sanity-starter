@@ -26,7 +26,7 @@ export function useVisualArrayPickerInserter({ props }: Readonly<Props>) {
    */
   const addItemsToArray: AddItemCallbackFn = useCallback(
     (items, index = -1) => {
-      let itemsToAdd = Array.isArray(items) ? items : [items];
+      const itemsToAdd = Array.isArray(items) ? items : [items];
 
       const isSingleItem = itemsToAdd.length === 1;
 

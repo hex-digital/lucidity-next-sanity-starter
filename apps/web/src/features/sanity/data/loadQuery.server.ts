@@ -7,6 +7,7 @@ import { client } from './client';
 import { appConfig } from '@/config/app';
 import { PERSPECTIVE } from '@pkg/sanity-toolkit/studio/constants/perspectives';
 import { SECONDS_IN } from '@pkg/utilities/time';
+import type { ClientPerspective } from 'next-sanity';
 
 const serverClient = client.withConfig({
   token: appConfig.sanity.readToken,
@@ -23,6 +24,26 @@ const serverClient = client.withConfig({
 queryStore.setServerClient(serverClient);
 
 const usingCdn = serverClient.config().useCdn;
+
+function getCacheConfig(
+  perspective: ClientPerspective,
+  options: Parameters<typeof queryStore.loadQuery>[2] = {},
+  usingCdn: boolean,
+) {
+  // If revalidate is 0, 'force-cache' has no effect (it won't cache the query)
+  const cache =
+    options.cache ?? (perspective === PERSPECTIVE.PREVIEW_DRAFTS ? 'no-cache' : 'force-cache');
+
+  const revalidate = getRevalidate(usingCdn, options.next?.tags);
+
+  const tags = [...(options.next?.tags ?? []), 'sanity'];
+
+  if (cache === 'no-cache' || revalidate === 0) {
+    console.log({ cache, revalidate, tags });
+  }
+
+  return { cache, revalidate, tags };
+}
 
 /**
  * Used to fetch data in Server Components.
@@ -50,19 +71,7 @@ export const loadQuery = (async (query, params = {}, options = {}) => {
     perspective = isDraftMode ? PERSPECTIVE.PREVIEW_DRAFTS : PERSPECTIVE.PUBLISHED,
   } = options;
 
-  // If revalidate is 0, 'force-cache' has no effect (it won't cache the query)
-  const cache =
-    options.cache ?? (perspective === PERSPECTIVE.PREVIEW_DRAFTS ? 'no-cache' : 'force-cache');
-
-  const revalidate = getRevalidate(usingCdn, options.next?.tags);
-
-  if (cache === 'no-cache' || revalidate === 0) {
-    console.log({
-      cache,
-      revalidate,
-      tags: [...(options.next?.tags ?? []), 'sanity'],
-    });
-  }
+  const { cache, revalidate, tags } = getCacheConfig(perspective, options, usingCdn);
 
   return queryStore.loadQuery(query, params, {
     ...options,
@@ -70,7 +79,7 @@ export const loadQuery = (async (query, params = {}, options = {}) => {
     next: {
       revalidate,
       ...(options.next ?? {}),
-      tags: [...(options.next?.tags ?? []), 'sanity'],
+      tags,
     },
     perspective,
     // Enable stega if in Draft Mode, to enable overlays when outside Sanity Studio

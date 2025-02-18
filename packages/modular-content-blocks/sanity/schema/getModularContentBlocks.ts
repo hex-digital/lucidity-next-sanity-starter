@@ -23,7 +23,7 @@ export function getModularBlocksFn(
    * including SECTION or INNER blocks.
    */
   function getModularBlocks(opts: GetBlocksOptions = {}) {
-    let blocks = initialBlocks(opts);
+    const blocks = initialBlocks(opts);
 
     const include = opts.include ?? [];
     const exclude = opts.exclude ?? [];
