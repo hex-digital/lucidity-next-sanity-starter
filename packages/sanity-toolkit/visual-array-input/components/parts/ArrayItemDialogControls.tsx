@@ -1,9 +1,10 @@
 import type { PropsWithChildren } from 'react';
-import { Card, Text, Flex, Stack, TextInput, Tooltip } from '@sanity/ui';
+import { Card, Flex, Stack, TextInput } from '@sanity/ui';
 import { SearchIcon } from '@sanity/icons';
-import { ViewButton } from './ViewButton';
-import { CiBoxList } from 'react-icons/ci';
-import { IoGridOutline } from 'react-icons/io5';
+// import { Text, Tooltip } from '@sanity/ui';
+// import { ViewButton } from './ViewButton';
+// import { CiBoxList } from 'react-icons/ci';
+// import { IoGridOutline } from 'react-icons/io5';
 
 interface Props {
   searchQuery: string;
@@ -15,8 +16,8 @@ interface Props {
 export function ArrayItemDialogControls({
   searchQuery,
   setSearchQuery,
-  gridView,
-  setGridView,
+  // gridView,
+  // setGridView,
 }: Readonly<PropsWithChildren<Props>>) {
   return (
     <Stack space={2}>
