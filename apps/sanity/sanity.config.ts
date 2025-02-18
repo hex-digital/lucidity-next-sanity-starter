@@ -7,7 +7,7 @@ import { structure } from '@/structure';
 import { defaultDocumentNode } from '@/structure/defaultDocumentNode';
 import { appConfig } from './config/app';
 import { setupSingletons } from '@pkg/sanity-toolkit/studio/singletons';
-import { LOCKED_DOCUMENT_TYPES } from '@/config/schema';
+import { LOCKED_DOCUMENT_TYPES } from '@pkg/common/config/schemaTypes';
 import { noteField } from '@pkg/sanity-toolkit/studio/studioComponents/noteField/plugin';
 import { documentActions } from '@/actions';
 

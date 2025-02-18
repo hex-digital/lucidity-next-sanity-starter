@@ -74,6 +74,7 @@
   display: flex;
   border-right-width: 1px;
   overflow: hidden;
+  position: relative;
   width: 100%;
   flex-shrink: 0;
 }
@@ -130,10 +131,6 @@
 }
 
 /* v2 - Musk removes headline */
-.tweetCardImage {
-  position: relative;
-}
-
 .tweetCardUrl {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 4px;

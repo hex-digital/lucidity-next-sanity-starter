@@ -18,7 +18,7 @@ export function formatConfigItemGroups(
   return configItemGroups.map((group) => {
     // If group.items is not an array, it's because it's currently being asynchronously transformed
     // from a function or promise within the useEffect. Therefore just accept an empty array for now.
-    let items = Array.isArray(group.items) ? group.items : [];
+    const items = Array.isArray(group.items) ? group.items : [];
 
     return {
       ...group,

@@ -18,7 +18,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate:types": "npx sanity typegen generate",
+    "generate:types": "pnpm sanity typegen generate",
     "lint": "next lint && pnpm prettier",
     "lint:fix": "next lint --fix && pnpm prettier:fix",
     "prettier": "prettier --check .",
@@ -29,12 +29,18 @@
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@next/third-parties": "15.1.7",
+    "@pkg/common": "workspace:*",
+    "@pkg/sanity-toolkit": "workspace:*",
+    "@pkg/utilities": "workspace:*",
+    "next-sanity": "9.8.49",
     "next": "15.1.7",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.2.0",
+    "@sanity/react-loader": "1.10.41",
     "@sanity/types": "3.76.1",
     "@types/node": "22.13.4",
     "@types/react": "19.0.10",
@@ -45,6 +51,7 @@
     "eslint-config-next": "15.1.7",
     "postcss": "8.5.2",
     "prettier": ">=3.4.2 <5.0.0",
+    "sanity": "3.76.1",
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
     "vitest": "3.0.6"

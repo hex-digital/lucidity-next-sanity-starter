@@ -74,7 +74,7 @@ export async function resolveCallableItemGroups(
   );
 
   /** Used to later track when all promises have settled */
-  let callResults: Array<Array<ConfigItem> | Promise<void | Array<ConfigItem>>> = [];
+  const callResults: Array<Array<ConfigItem> | Promise<void | Array<ConfigItem>>> = [];
 
   /** Map of objects with a promise and the corresponding itemGroup name that it belongs to */
   const trackedPromises = callableItemGroups.map((itemGroup) => {

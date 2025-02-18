@@ -1,5 +1,5 @@
 export enum PERSPECTIVE {
   RAW = 'raw',
-  PREVIEW_DRAFTS = 'previewDrafts',
+  PREVIEW_DRAFTS = 'drafts',
   PUBLISHED = 'published',
 }

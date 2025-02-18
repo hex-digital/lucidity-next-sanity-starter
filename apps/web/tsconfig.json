@@ -2,7 +2,6 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": "./src",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -23,6 +22,7 @@
       }
     ],
     "paths": {
+      "@/config/*": ["./config/*"],
       "@/*": ["./src/*"]
     }
   },
