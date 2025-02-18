@@ -1,5 +1,5 @@
 import { getDocumentUrlPrefix } from '@pkg/common/schema/getDocumentUrlPrefix';
-import { serverConfig } from '@/libs/config/server';
+import { appConfig } from '@/config/app';
 
 /**
  * Create a fully qualified URL from a pathname and type, for accessing the document on the frontend.
@@ -38,5 +38,5 @@ export function urlFromPath(path: string) {
     slashlessPath = slashlessPath.slice(0, -1);
   }
 
-  return `${serverConfig.site.resolvedBaseUrl}/${slashlessPath}`;
+  return `${appConfig.baseUrl}/${slashlessPath}`;
 }
