@@ -1,10 +1,11 @@
 import type { NextRequest } from 'next/server';
 import { runNextMiddlewarePipeline } from '@pkg/next-middleware/utilities';
-import madeWithLucidity from './middleware/made-with-lucidity';
-import middlewareProcessed from './middleware/middleware-processed';
+import { madeWithLucidity } from './middleware/made-with-lucidity';
+import { middlewareProcessed } from './middleware/middleware-processed';
+import { cmsRedirects } from './middleware/cmsRedirects';
 
 /** Add middleware to the pipeline here. They will be executed in the order they are listed here. */
-const middlewarePipeline = [middlewareProcessed, madeWithLucidity];
+const middlewarePipeline = [cmsRedirects, middlewareProcessed, madeWithLucidity];
 
 /** See: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher */
 export const config = {

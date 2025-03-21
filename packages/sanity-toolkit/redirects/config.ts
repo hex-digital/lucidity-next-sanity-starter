@@ -1,0 +1,15 @@
+export const skipFileExtensions = [
+  'index.xml',
+  'sitemap.xml',
+  'style.xsl',
+  '.css',
+  '.png',
+  '.svg',
+  '.jpg',
+  '.webp',
+  '.aiff',
+  '.woff',
+  '.woff2',
+  '.mp3',
+  '.mp4',
+];

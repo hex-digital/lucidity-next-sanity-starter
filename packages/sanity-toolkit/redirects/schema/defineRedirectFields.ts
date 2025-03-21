@@ -52,6 +52,8 @@ export function defineRedirectFields(internalLinkTypes: Array<string>) {
           title: 'Link Type',
           name: 'linkType',
           type: 'string',
+          description:
+            'Use "Page" to choose a page from the CMS. Its URL will be kept up-to-date if it changes. Otherwise use "Link" to enter a full URL.',
           initialValue: REDIRECT_TYPE.DIRECT_PAGE,
           options: {
             layout: 'radio',
