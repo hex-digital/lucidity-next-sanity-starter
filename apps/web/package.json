@@ -33,7 +33,7 @@
     "@pkg/common": "workspace:*",
     "@pkg/sanity-toolkit": "workspace:*",
     "@pkg/utilities": "workspace:*",
-    "next": "15.2.1",
+    "next": "15.2.3",
     "next-sanity": "9.9.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
