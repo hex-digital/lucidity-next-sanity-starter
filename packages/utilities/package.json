@@ -16,8 +16,8 @@
     "directory": "packages/utilities"
   },
   "scripts": {
-    "lint": "pnpm prettier",
-    "lint:fix": "pnpm prettier:fix",
+    "lint": "eslint .; pnpm prettier",
+    "lint:fix": "eslint --fix .; pnpm prettier:fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "pnpm test:unit",
@@ -29,6 +29,7 @@
     "speakingurl": "^14.0.1"
   },
   "devDependencies": {
+    "@pkg/eslint-plugin": "workspace:*",
     "@types/speakingurl": "^13.0.6",
     "@vitest/coverage-v8": "^3.0.9",
     "@vitest/ui": "3.0.9",

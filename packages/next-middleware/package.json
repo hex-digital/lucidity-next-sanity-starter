@@ -6,8 +6,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "lint": "pnpm prettier",
-    "lint:fix": "pnpm prettier:fix",
+    "lint": "eslint .; pnpm prettier",
+    "lint:fix": "eslint --fix .; pnpm prettier:fix",
     "prettier": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "test": "pnpm test:unit",

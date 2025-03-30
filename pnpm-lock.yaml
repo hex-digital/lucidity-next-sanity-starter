@@ -186,7 +186,7 @@ importers:
         version: 5.8.2
       vitest:
         specifier: 3.0.9
-        version: 3.0.9(@types/node@22.13.14)(@vitest/ui@3.0.9)(happy-dom@16.8.1)(jiti@2.4.2)(jsdom@26.0.0)(less@4.2.2)(sass@1.86.0)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.0)
+        version: 3.0.9(@types/node@22.13.14)(@vitest/ui@3.0.9)(happy-dom@16.8.1)(jiti@2.4.2)(jsdom@23.2.0)(less@4.2.2)(sass@1.86.0)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.0)
     dependenciesMeta:
       '@pkg/common':
         injected: true
@@ -286,10 +286,13 @@ importers:
         version: 5.8.2
       vitest:
         specifier: 3.0.9
-        version: 3.0.9(@types/node@22.13.14)(@vitest/ui@3.0.9)(happy-dom@16.8.1)(jiti@2.4.2)(jsdom@23.2.0)(less@4.2.2)(sass@1.86.0)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.0)
+        version: 3.0.9(@types/node@22.13.14)(@vitest/ui@3.0.9)(happy-dom@16.8.1)(jiti@2.4.2)(jsdom@26.0.0)(less@4.2.2)(sass@1.86.0)(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.0)
 
   packages/common:
     devDependencies:
+      '@pkg/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
       '@vitest/coverage-v8':
         specifier: ^3.0.9
         version: 3.0.9(vitest@3.0.9)
@@ -305,6 +308,9 @@ importers:
 
   packages/config:
     devDependencies:
+      '@pkg/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
       '@vitest/coverage-v8':
         specifier: ^3.0.9
         version: 3.0.9(vitest@3.0.9)
@@ -391,6 +397,9 @@ importers:
         specifier: ^3.81.0
         version: 3.81.0(@emotion/is-prop-valid@1.2.2)(@types/node@22.13.14)(@types/react@19.0.12)(jiti@2.4.2)(less@4.2.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.0)(styled-components@6.1.16(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(stylus@0.62.0)(tsx@4.19.3)(yaml@2.7.0)
     devDependencies:
+      '@pkg/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
       '@testing-library/dom':
         specifier: ^10.4.0
         version: 10.4.0
@@ -415,6 +424,9 @@ importers:
 
   packages/next-middleware:
     devDependencies:
+      '@pkg/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
       '@vitest/coverage-v8':
         specifier: ^3.0.9
         version: 3.0.9(vitest@3.0.9)
@@ -525,6 +537,9 @@ importers:
         specifier: ^14.0.1
         version: 14.0.1
     devDependencies:
+      '@pkg/eslint-plugin':
+        specifier: workspace:*
+        version: link:../eslint-plugin
       '@types/speakingurl':
         specifier: ^13.0.6
         version: 13.0.6

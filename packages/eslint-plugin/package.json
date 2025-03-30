@@ -5,6 +5,12 @@
   "description": "My ESLint config",
   "license": "MIT",
   "main": "./index.js",
+  "scripts": {
+    "lint": "eslint .; pnpm prettier",
+    "lint:fix": "eslint --fix .; pnpm prettier:fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write ."
+  },
   "peerDependencies": {
     "@eslint-react/eslint-plugin": "catalog:dev",
     "eslint": "catalog:dev",
