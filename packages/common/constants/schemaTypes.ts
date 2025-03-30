@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/prefer-literal-enum-member */
+
 /**
  * List of all the schema types we use in Sanity, as constants.
  * This allows us to refer to them by their constant symbol, rather than a magic string,

@@ -7,7 +7,7 @@ export type NextMiddlewareHandler<
 > = (
   request: Request,
   response: Response,
-) => Promise<Response | undefined | void> | Response | undefined | void; // eslint-disable-line @typescript-eslint/no-invalid-void-type
+) => Promise<Response | undefined | void> | Response | undefined | void;
 
 export function defineNextMiddleware<
   Request extends NextRequest = NextRequest,
@@ -70,7 +70,7 @@ export function mergeQueryParams(
     }
 
     return urlObj.toString();
-  } catch (error) {
+  } catch {
     console.error('Error adding query parameters');
     return url;
   }

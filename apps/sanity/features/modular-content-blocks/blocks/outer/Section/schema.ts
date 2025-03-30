@@ -15,10 +15,6 @@ import {
 } from '@pkg/common/constants/blocks/outer/section';
 import { defineOuterBlock } from '@/features/modular-content-blocks/schema/defineOuterBlockField';
 
-interface Prepare {
-  image?: Image;
-}
-
 const placementVariants: TitledListValue<SECTION_IMAGE_PLACEMENT>[] = [
   { title: 'Image Left', value: SECTION_IMAGE_PLACEMENT.LEFT },
   { title: 'Image Right', value: SECTION_IMAGE_PLACEMENT.RIGHT },
