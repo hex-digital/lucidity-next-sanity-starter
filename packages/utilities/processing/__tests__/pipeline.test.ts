@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+
 import { describe, it, expect } from 'vitest';
 import { pipeline, toPipe } from '../pipeline';
 
@@ -13,7 +15,7 @@ describe('pipeline', () => {
 
   it('should handle different types of transformations', () => {
     const data = 'hello';
-    const addExclamation = (str: string) => str + '!';
+    const addExclamation = (str: string) => `${str}!`;
     const toUpperCase = (str: string) => str.toUpperCase();
 
     const result = pipeline(data, addExclamation, toUpperCase);

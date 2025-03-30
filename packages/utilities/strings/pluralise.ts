@@ -18,13 +18,13 @@ export function pluralise(
 
   // Handle words ending in 'y'
   if (word.endsWith('y') && !/[aeiou]y$/.test(word)) {
-    return word.slice(0, -1) + 'ies';
+    return `${word.slice(0, -1)}ies`;
   }
 
   // Handle words ending in 's', 'sh', 'ch', 'x', or 'z'
   if (/s$|sh$|ch$|x$|z$/.test(word)) {
-    return word + 'es';
+    return `${word}es`;
   }
 
-  return word + 's';
+  return `${word}s`;
 }

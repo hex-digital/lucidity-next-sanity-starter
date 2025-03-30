@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export function isFetchError(
   error: unknown,
 ): error is { response?: { data?: { err?: string } } } {
