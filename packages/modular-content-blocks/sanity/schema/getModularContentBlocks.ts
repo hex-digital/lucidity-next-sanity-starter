@@ -1,4 +1,5 @@
-import { defineArrayMember, type SchemaTypeDefinition } from 'sanity';
+import { defineArrayMember } from 'sanity';
+import type { SchemaTypeDefinition } from 'sanity';
 import type { GetBlocksOptions, ModularBlockArrayMember } from '../../types';
 import { ONLY } from '../../constants';
 
@@ -29,19 +30,17 @@ export function getModularBlocksFn(
     const exclude = opts.exclude ?? [];
 
     return blocks.reduce((acc, blockSchema) => {
-      if (blockSchema.name !== undefined) {
-        const isExcluded = !!exclude.length && exclude.includes(blockSchema.name);
-        const isIncluded = !include.length || include.includes(blockSchema.name);
+      const isExcluded = !!exclude.length && exclude.includes(blockSchema.name);
+      const isIncluded = !include.length || include.includes(blockSchema.name);
 
-        if (!isExcluded && isIncluded) {
-          acc.push(
-            defineArrayMember({
-              title: blockSchema.title ?? 'Unnamed block',
-              name: blockSchema.name,
-              type: blockSchema.name,
-            }),
-          );
-        }
+      if (!isExcluded && isIncluded) {
+        acc.push(
+          defineArrayMember({
+            title: blockSchema.title ?? 'Unnamed block',
+            name: blockSchema.name,
+            type: blockSchema.name,
+          }),
+        );
       }
 
       return acc;
@@ -49,13 +48,11 @@ export function getModularBlocksFn(
   }
 
   function initialBlocks(opts: GetBlocksOptions = {}) {
-    if (typeof opts.only !== 'undefined') {
-      if (opts.only === ONLY.OUTER) {
-        return outerOnlyBlocks;
-      }
-      if (opts.only === ONLY.INNER) {
-        return innerOnlyBlocks;
-      }
+    if (opts.only === ONLY.OUTER) {
+      return outerOnlyBlocks;
+    }
+    if (opts.only === ONLY.INNER) {
+      return innerOnlyBlocks;
     }
 
     return allBlocks;

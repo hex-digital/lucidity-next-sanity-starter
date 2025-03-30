@@ -10,8 +10,6 @@ import type { FieldToChildFieldsMap } from '../types';
  * @param fieldToChildFields
  */
 export function defineOuterBlockFn(fieldToChildFields?: FieldToChildFieldsMap) {
-  const outerBlockItemComponent = makeOuterBlockItemComponentFn(fieldToChildFields);
-
   return function defineOuterBlock(schemaTypeDefinition: BlockSchemaDefinition) {
     return {
       ...schemaTypeDefinition,
@@ -19,7 +17,9 @@ export function defineOuterBlockFn(fieldToChildFields?: FieldToChildFieldsMap) {
       fieldsets: [...outerBlockFieldsets(), ...(schemaTypeDefinition.fieldsets ?? [])],
       components: {
         ...schemaTypeDefinition.components,
-        item: schemaTypeDefinition.components?.item ?? makeOuterBlockItemComponentFn(),
+        item:
+          schemaTypeDefinition.components?.item ??
+          makeOuterBlockItemComponentFn(fieldToChildFields),
       },
     } satisfies BlockSchemaDefinition;
   };

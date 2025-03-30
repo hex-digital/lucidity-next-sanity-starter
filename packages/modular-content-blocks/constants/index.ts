@@ -9,6 +9,6 @@ export enum BLOCK_CATEGORY {
 }
 
 export enum ONLY {
-  OUTER = BLOCK_CATEGORY.OUTER,
-  INNER = BLOCK_CATEGORY.INNER,
+  OUTER = 'outer', // Must match BLOCK_CATEGORY.OUTER
+  INNER = 'inner', // Must match BLOCK_CATEGORY.INNER
 }

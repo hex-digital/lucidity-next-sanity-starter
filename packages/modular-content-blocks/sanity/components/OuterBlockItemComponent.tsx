@@ -1,7 +1,7 @@
 import type { ObjectItemProps, ObjectMember } from 'sanity';
 import { Card, Stack } from '@sanity/ui';
 import type { ComponentType } from 'react';
-import { ModularBlocksProvider } from '../context/ModularBlocksProvider';
+import { ModularBlocksProvider } from '../providers/ModularBlocksProvider';
 import type {
   ContentMember,
   FieldToChildFieldsMap,
@@ -30,7 +30,7 @@ export function makeOuterBlockItemComponentFn(
 
     const {
       type,
-      children,
+      children, // eslint-disable-line @typescript-eslint/no-unsafe-assignment
       hasInnerBlocks = false,
     } = getChildrenPreview(props, props.children as SanityObjectItemPropsChildren);
 

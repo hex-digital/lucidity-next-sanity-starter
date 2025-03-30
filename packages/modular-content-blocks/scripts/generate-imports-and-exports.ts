@@ -56,7 +56,7 @@ export const ${exportConstName} = [${files.map((_, index) => `\n  { ${importId}:
  */
 function getRelativeImportPath(fullPath: string, outputPath: string): string {
   const relativePath = relative(outputPath, fullPath);
-  return './' + relativePath.replace(/\\/g, '/').replace(/\.ts$/, ''); // Normalize for Unix-like paths and remove .ts
+  return `./${relativePath.replace(/\\/g, '/').replace(/\.ts$/, '')}`; // Normalize for Unix-like paths and remove .ts
 }
 
 /**

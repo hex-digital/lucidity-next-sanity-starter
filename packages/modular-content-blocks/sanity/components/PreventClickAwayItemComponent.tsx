@@ -1,5 +1,6 @@
 import type { ItemProps } from 'sanity';
-import { useModularBlocks } from '../context/ModularBlocksProvider';
+
+import { useModularBlocks } from '../hooks/useModularBlocks';
 
 export function PreventClickAwayItemComponent(props: ItemProps) {
   const { state } = useModularBlocks();

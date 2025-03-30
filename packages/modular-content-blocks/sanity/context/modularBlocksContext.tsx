@@ -1,4 +1,4 @@
-import { useContext, createContext, type ReactNode } from 'react';
+import { createContext } from 'react';
 
 export const ModularBlocksContext = createContext({
   state: {
@@ -14,23 +14,3 @@ export const ModularBlocksContext = createContext({
     overviewPreview: false,
   },
 });
-
-export const ModularBlocksProvider = ({
-  children,
-  overviewPreview,
-}: {
-  children: ReactNode;
-  overviewPreview?: boolean;
-}) => {
-  const value = {
-    state: { overviewPreview: overviewPreview ?? false },
-  };
-
-  return (
-    <ModularBlocksContext.Provider value={value}>{children}</ModularBlocksContext.Provider>
-  );
-};
-
-export const useModularBlocks = () => {
-  return useContext(ModularBlocksContext);
-};

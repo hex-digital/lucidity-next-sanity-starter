@@ -1,5 +1,4 @@
-import type { ObjectDefinition } from 'sanity';
-import type { ObjectOptions } from 'sanity';
+import type { ObjectDefinition, ObjectOptions } from 'sanity';
 
 /**
  * Pass any of the properties of Sanity object types described here: https://www.sanity.io/docs/object-type

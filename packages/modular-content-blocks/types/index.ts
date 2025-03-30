@@ -1,4 +1,4 @@
-import { ONLY } from '../constants';
+import type { ONLY } from '../constants';
 
 /**
  * The structure of Array Members for Modular Blocks.
