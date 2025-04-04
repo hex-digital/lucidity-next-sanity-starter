@@ -6,9 +6,9 @@ import { stringToSlug } from '../utilities';
 export function useSuperSlugField(props: SuperSlugInputProps & { apiVersion: string }) {
   const { schemaType, onChange } = props;
 
-  const options = schemaType.options;
+  // const options = schemaType.options;
 
-  const slugifyFn = options?.slugifyFn ?? stringToSlug;
+  const slugifyFn = stringToSlug; // @todo support user-defined 'slugify' function
 
   const updateSlug = useCallback(
     (nextSlug: string) => {

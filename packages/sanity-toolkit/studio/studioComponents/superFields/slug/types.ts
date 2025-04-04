@@ -15,7 +15,7 @@ export type SlugPrefix = string;
 
 export type SlugSourceFn = (
   document: SanityDocument,
-  context: SlugContext,
+  context: SlugSourceContext,
 ) => string | Promise<string>;
 
 /** This may need to move somewhere more general in future */
@@ -34,7 +34,6 @@ export type SuperSlugSchemaOptions = SlugOptions & {
   folder?: {
     canUnlock?: boolean;
   };
-  slugifyFn?: (string: string) => string;
   i18n?: {
     enabled?: boolean;
     defaultLocaleId?: string;
