@@ -30,13 +30,13 @@
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-v8": "^3.0.9",
     "@vitest/ui": "3.0.9",
-    "eslint": "9.23.0",
-    "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-compiler": "19.0.0-beta-aeaed83-20250323",
+    "eslint": "catalog:dev",
     "eslint-plugin-import-x": "catalog:dev",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-compiler": "catalog:dev",
     "happy-dom": "^16.5.3",
     "prettier": "^3.5.3",
-    "typescript": "5.8.2",
+    "typescript": "catalog:dev",
     "typescript-plugin-css-modules": "^5.1.0",
     "vitest": "^3.0.9"
   },
@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@sanity/incompatible-plugin": "^1.0.5",
+    "@sanity/util": "^3.81.0",
     "nanoid": "^5.0.9"
   }
 }

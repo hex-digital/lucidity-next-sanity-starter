@@ -36,7 +36,7 @@
     "@vitest/coverage-v8": "^3.0.9",
     "@vitest/ui": "3.0.9",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.2",
+    "typescript": "catalog:dev",
     "vitest": "^3.0.9"
   }
 }

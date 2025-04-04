@@ -14,7 +14,7 @@ import {
   GROUP_SEO,
 } from '@pkg/sanity-toolkit/studio/constants/fieldGroups';
 import { orderByPathname, orderByTitle } from '@pkg/sanity-toolkit/studio/schema/orderings';
-import { definePathnameField } from '@/features/generic/schema/definePathnameField';
+import { defineSlugField } from '@/features/generic/schema/defineSlugField';
 import { defineSeoFields } from '@/features/seo/schema/defineSeoFields';
 import { GrArticle } from 'react-icons/gr';
 import { URL_PREFIX } from '@pkg/common/constants/urlPrefixes';
@@ -51,7 +51,7 @@ export const article = defineType({
 
     ...withGroup(FIELD_GROUPS.META, [
       defineVisibilityField(),
-      definePathnameField({
+      defineSlugField({
         initialValue: { current: `${URL_PREFIX.ARTICLES}/` },
         options: { source: 'title', folder: { canUnlock: false } },
       }),

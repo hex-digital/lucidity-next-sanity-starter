@@ -5,6 +5,7 @@ import type {
   SchemaValidationValue,
 } from 'sanity';
 import type { CharCountOptions } from '../../characterCount/types';
+
 /**
  * The available options for a SuperString field.
  */

@@ -1,0 +1,22 @@
+.superSlugInput__preview {
+  margin-bottom: 0.75rem;
+}
+
+.superSlugInput__unlock {
+  position: static !important;
+  cursor: pointer;
+}
+
+.superSlugInput__unlock > span:nth-of-type(2) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.superSlugInput__folder-text {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}

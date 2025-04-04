@@ -1,5 +1,5 @@
 import { defineField, defineType } from 'sanity';
-import { PiFilesLight } from 'react-icons/pi';
+import { PiFilesBold } from 'react-icons/pi';
 import { DOCUMENT, OBJECT } from '@pkg/common/constants/schemaTypes';
 import {
   defineVisibilityField,
@@ -16,7 +16,7 @@ import {
   GROUP_SEO,
 } from '@pkg/sanity-toolkit/studio/constants/fieldGroups';
 import { orderByPathname, orderByTitle } from '@pkg/sanity-toolkit/studio/schema/orderings';
-import { definePathnameField } from '@/features/generic/schema/definePathnameField';
+import { defineSlugField } from '@/features/generic/schema/defineSlugField';
 import { defineSeoFields } from '@/features/seo/schema/defineSeoFields';
 
 interface Prepare {
@@ -29,7 +29,7 @@ export const page = defineType({
   name: DOCUMENT.PAGE,
   title: 'Page',
   type: 'document',
-  icon: PiFilesLight,
+  icon: PiFilesBold,
 
   groups: [GROUP_META, GROUP_CONTENT, GROUP_SEO],
 
@@ -40,7 +40,7 @@ export const page = defineType({
 
     ...withGroup(FIELD_GROUPS.META, [
       defineVisibilityField(),
-      definePathnameField({ options: { source: 'title' } }),
+      defineSlugField({ options: { source: 'title' }, validation: (rule) => rule.required() }),
     ]),
 
     ...withGroup(FIELD_GROUPS.CONTENT, [
