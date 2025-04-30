@@ -4,64 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-catalogs:
-  dev:
-    '@eslint-react/eslint-plugin':
-      specifier: ^1.37.3
-      version: 1.38.3
-    '@types/node':
-      specifier: ^22.13.11
-      version: 22.13.14
-    eslint:
-      specifier: ^9.23.0
-      version: 9.23.0
-    eslint-config-prettier:
-      specifier: ^10.1.1
-      version: 10.1.1
-    eslint-plugin-format:
-      specifier: ^1.0.1
-      version: 1.0.1
-    eslint-plugin-import-x:
-      specifier: ^4.9.1
-      version: 4.9.3
-    eslint-plugin-react-compiler:
-      specifier: 19.0.0-beta-aeaed83-20250323
-      version: 19.0.0-beta-aeaed83-20250323
-    eslint-plugin-react-hooks:
-      specifier: ^5.2.0
-      version: 5.2.0
-    eslint-plugin-react-refresh:
-      specifier: ^0.4.19
-      version: 0.4.19
-    eslint-plugin-unused-imports:
-      specifier: ^4.1.4
-      version: 4.1.4
-    lint-staged:
-      specifier: ^15.5.0
-      version: 15.5.0
-    typescript:
-      specifier: ^5.8.2
-      version: 5.8.2
-    vite:
-      specifier: ^6.2.5
-      version: 6.2.5
-  prod:
-    '@typescript-eslint/eslint-plugin':
-      specifier: ^8.27.0
-      version: 8.28.0
-    '@typescript-eslint/parser':
-      specifier: ^8.27.0
-      version: 8.28.0
-    eslint-flat-config-utils:
-      specifier: ^2.0.1
-      version: 2.0.1
-    globals:
-      specifier: ^16.0.0
-      version: 16.0.0
-    local-pkg:
-      specifier: ^1.1.1
-      version: 1.1.1
-
 importers:
 
   .:
@@ -7840,6 +7782,64 @@ packages:
 
   zod@3.24.2:
     resolution: {integrity: sha512-lY7CDW43ECgW9u1TcT3IoXHflywfVqDYze4waEz812jR/bZ8FHDsl7pFQoSZTz5N+2NqRXs8GBwnAwo3ZNxqhQ==}
+
+catalogs:
+  dev:
+    '@eslint-react/eslint-plugin':
+      specifier: ^1.37.3
+      version: 1.38.3
+    '@types/node':
+      specifier: ^22.13.11
+      version: 22.13.14
+    eslint:
+      specifier: ^9.23.0
+      version: 9.23.0
+    eslint-config-prettier:
+      specifier: ^10.1.1
+      version: 10.1.1
+    eslint-plugin-format:
+      specifier: ^1.0.1
+      version: 1.0.1
+    eslint-plugin-import-x:
+      specifier: ^4.9.1
+      version: 4.9.3
+    eslint-plugin-react-compiler:
+      specifier: 19.0.0-beta-aeaed83-20250323
+      version: 19.0.0-beta-aeaed83-20250323
+    eslint-plugin-react-hooks:
+      specifier: ^5.2.0
+      version: 5.2.0
+    eslint-plugin-react-refresh:
+      specifier: ^0.4.19
+      version: 0.4.19
+    eslint-plugin-unused-imports:
+      specifier: ^4.1.4
+      version: 4.1.4
+    lint-staged:
+      specifier: ^15.5.0
+      version: 15.5.0
+    typescript:
+      specifier: ^5.8.2
+      version: 5.8.2
+    vite:
+      specifier: ^6.2.5
+      version: 6.2.5
+  prod:
+    '@typescript-eslint/eslint-plugin':
+      specifier: ^8.27.0
+      version: 8.28.0
+    '@typescript-eslint/parser':
+      specifier: ^8.27.0
+      version: 8.28.0
+    eslint-flat-config-utils:
+      specifier: ^2.0.1
+      version: 2.0.1
+    globals:
+      specifier: ^16.0.0
+      version: 16.0.0
+    local-pkg:
+      specifier: ^1.1.1
+      version: 1.1.1
 
 snapshots:
 
