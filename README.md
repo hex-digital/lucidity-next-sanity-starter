@@ -1,7 +1,7 @@
 <a id="readme-top"></a>
 
 > This repo is a work in progress. Star 🌟 and subscribe to Releases 🏷️ to keep up to date.  
-> We're working on the Sanity app and toolkit first, while React 19 and Next 15 settles.
+> We're working on the Sanity app and toolkit first, so it's currently bring-your-own-frontend.
 
 <p></p>
 
