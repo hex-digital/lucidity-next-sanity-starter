@@ -29,6 +29,7 @@
     "g:ci-check": "pnpm install && pnpm g:typecheck && pnpm g:lint && pnpm g:test:unit && pnpm g:build",
     "g:dev": "turbo run dev --color",
     "g:generate:types": "turbo run generate:types",
+    "g:init": "cd apps/sanity && pnpm run init",
     "g:lint-staged-files": "lint-staged --allow-empty",
     "g:lint": "TIMING=1 turbo run lint --color",
     "g:lint:fix": "turbo run lint:fix --color",
