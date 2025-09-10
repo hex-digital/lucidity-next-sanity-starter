@@ -16,7 +16,7 @@ catalogs:
     lint-staged: ^15.5.0
     tsx: ^4.19.3
     typescript: ^5.8.2
-    vite: ^6.2.5
+    vite: ^6.3.6
   prod:
     '@typescript-eslint/eslint-plugin': ^8.27.0
     '@typescript-eslint/parser': ^8.27.0
