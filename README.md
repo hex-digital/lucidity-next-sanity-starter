@@ -150,7 +150,8 @@ For more detailed instructions, see the [Getting Started](./docs/index.md) guide
 
 - [https://www.toogoodtogo.com](https://www.toogoodtogo.com)
 - [https://datazone.birdlife.org](https://datazone.birdlife.org)
-- [https://www.atomos.co.uk/](https://www.atomos.co.uk)
+- [https://www.atomos.co.uk](https://www.atomos.co.uk)
+- [https://www.conservation.org](https://www.conservation.org)
 
 Send in a PR with your own addition
 
